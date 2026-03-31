@@ -323,7 +323,7 @@ export default function Home() {
                           </div>
                           <div className="glass rounded-lg p-2.5">
                             <div className="text-xs text-platinum-600 mb-0.5">Activation</div>
-                            <div className="font-bold text-sm" style={{ color: sim.brand.color }}>{formatM(sim.partnership.totalActivation)}</div>
+                            <div className="font-bold text-sm" style={{ color: sim.brand.color }}>{formatM(sim.partnership.totalActivationAndMedia)}</div>
                           </div>
                         </div>
                         <div className="text-xs text-platinum-600 mb-4">
