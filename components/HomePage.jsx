@@ -96,7 +96,6 @@ export default function HomePage({ onNavigate }) {
       {/* Hero */}
       <div className="card-premium rounded-2xl p-10">
         <div className="max-w-3xl">
-          <div className="text-xs uppercase tracking-widest text-platinum-500 mb-4">CAA | Creative Artists Agency</div>
           <h1 className="text-5xl font-display font-bold text-premium leading-tight mb-4">
             CultureOS
           </h1>
@@ -106,7 +105,6 @@ export default function HomePage({ onNavigate }) {
           <div className="flex gap-3 flex-wrap">
             <div className="px-4 py-2 glass rounded-full text-sm text-platinum-300 border border-noir-600">Preliminary Demonstration</div>
             <div className="px-4 py-2 glass rounded-full text-sm text-platinum-300 border border-noir-600">March 2026</div>
-            <div className="px-4 py-2 glass rounded-full text-sm text-champagne-500 border border-champagne-500/20">Built by stargirl</div>
           </div>
         </div>
       </div>
@@ -256,9 +254,8 @@ export default function HomePage({ onNavigate }) {
       {/* Vision note */}
       <div className="glass rounded-2xl p-6 border border-champagne-500/20 text-center">
         <p className="text-platinum-400 text-sm leading-relaxed max-w-2xl mx-auto">
-          CultureOS is a preliminary demonstration. The current Resonance Agent population of 33,200 is designed to scale to 320,000+ as CAA proprietary data, granular demographic segmentation, and self-improving model architecture are integrated in subsequent phases.
+          CultureOS is a preliminary demonstration. The current Resonance Agent population of 33,200 is designed to scale to 320,000+ as proprietary data, granular demographic segmentation, and self-improving model architecture are integrated in subsequent phases.
         </p>
-        <p className="text-platinum-600 text-xs mt-3">Built by stargirl | CAA | March 2026</p>
       </div>
 
     </div>

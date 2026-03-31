@@ -295,7 +295,6 @@ export default function FridayInsights() {
         <p className="text-platinum-600 text-xs">
           Signals aggregated from Reddit, X, Kalshi, Polymarket, and media monitoring — modeled against 33,200 Resonance Agents
         </p>
-        <p className="text-platinum-700 text-xs mt-1">Built by stargirl | CAA | CultureOS</p>
       </div>
     </div>
   );
