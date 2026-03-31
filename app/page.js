@@ -90,7 +90,6 @@ export default function Home() {
             <div className="text-center mb-8">
               <h1 className="text-5xl font-display font-bold text-premium mb-3">CultureOS</h1>
               <p className="text-platinum-400">Cultural Impact Simulation Engine</p>
-              <div className="mt-2 text-xs text-platinum-600">Built by stargirl | CAA | March 2026</div>
             </div>
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
