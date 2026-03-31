@@ -5,8 +5,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const WEEK_OF = 'Week of March 24 – 28, 2026';
-const PUBLISHED = 'Friday, March 28, 2026';
+const WEEK_OF = 'Week of March 24 – 30, 2026';
+const PUBLISHED = 'Monday, March 30, 2026';
 
 // stargirl | current cultural signals — sourced from social, prediction markets, news
 const TIMELINE_EVENTS = [
@@ -14,100 +14,100 @@ const TIMELINE_EVENTS = [
     day: 'Monday',
     date: 'Mar 24',
     category: 'Sports / Culture',
-    heat: 92,
-    headline: 'Caitlin Clark Effect Continues to Reshape WNBA Sponsorship Economics',
-    summary: "Indiana Fever season ticket demand broke another record ahead of the 2026 WNBA season. Brands targeting women 18-44 are now treating WNBA inventory as a genuine tier-2 buy. Category exclusivity windows are narrowing fast — several major consumer categories have been claimed in the last 90 days.",
-    signal: 'WNBA partner valuations up an estimated 40% year-over-year. Brands that waited on 2025 deals are now facing significantly higher rights fees.',
-    tags: ['WNBA', 'Women\'s Sports', 'Brand Spend'],
+    heat: 91,
+    headline: 'WNBA Sponsorship Pricing Has Officially Left the Emerging Category Era',
+    summary: "Indiana Fever season ticket demand broke records again ahead of the 2026 season, and brand exclusivity windows are closing across consumer categories. What was framed as a long-term bet two years ago is now a competitive market. Several major packaged goods, financial services, and apparel categories have been locked by early movers — late entrants are now paying significantly more for less.",
+    signal: 'WNBA partner valuations are up an estimated 40% year-over-year. The Caitlin Clark effect is structural, not cyclical. Brands that treated this as a wait-and-see play are now priced out of the best inventory.',
+    tags: ['WNBA', "Women's Sports", 'Brand Spend'],
     source: 'Social velocity + ticket sales data'
   },
   {
     day: 'Monday',
     date: 'Mar 24',
     category: 'Market Signal',
-    heat: 78,
-    headline: 'FIFA World Cup 2026 Hospitality Packages Approaching Sellout',
-    summary: "With the tournament now less than 90 days away, corporate hospitality inventory for the U.S. host cities — New York, Los Angeles, Dallas, San Francisco — is nearly exhausted at premium tiers. Brands still seeking activation windows are pivoting to digital and broadcast layers.",
-    signal: 'Polymarket now rates a 94% probability of 5B+ cumulative viewers. Activation window for late-entering brands is closing.',
+    heat: 80,
+    headline: 'FIFA World Cup 2026 Corporate Hospitality Has Effectively Sold Out at Premium Tier',
+    summary: "With the tournament now less than 90 days away, premium corporate hospitality in the U.S. host cities — New York, Los Angeles, Dallas — is nearly exhausted. Brands still seeking physical presence are pivoting to digital activation, broadcast overlays, and creator-led content strategies. The physical window is closed for most categories.",
+    signal: 'Polymarket rates a 94% probability of 5B+ cumulative viewers. The question is no longer whether to activate — it is how to activate without hospitality access.',
     tags: ['FIFA', 'World Cup 2026', 'Hospitality'],
     source: 'Polymarket + venue data'
   },
   {
     day: 'Tuesday',
     date: 'Mar 25',
-    category: 'Cultural Shift',
-    heat: 85,
-    headline: 'NCAA March Madness Drives Record Digital Engagement — Brands Missing the Moment',
-    summary: "The 2026 NCAA Tournament is tracking to be the most digitally engaged in history. X and Reddit bracket discourse is up 60% versus 2025. Streaming viewership on Peacock and CBS has outpaced linear for the first time. Brands with college sports adjacency are generating outsized earned media.",
-    signal: 'Kalshi prediction markets show 71% probability of a new NCAA TV deal valued above $2B annually before the 2027 season. Sponsorship floor will reprice accordingly.',
-    tags: ['NCAA', 'March Madness', 'Streaming'],
-    source: 'X volume data + Kalshi'
+    category: 'Cultural Tension',
+    heat: 86,
+    headline: 'NIL Spending Crossed $1.2B — and the Model Is Breaking Under Its Own Weight',
+    summary: "NCAA Name, Image, and Likeness spending has exceeded $1.2B in the 2025-26 academic year, but the category is fragmenting. Brands are now managing relationships with individual athletes, collectives, and universities simultaneously, often without coordination. The result is inconsistent ROI, brand dilution, and fan backlash against deals that read as transactional rather than authentic.",
+    signal: 'The NIL era has expanded into high schools and even middle schools, with families retaining agents and holding back students a year to improve NIL positioning. This is not a controlled environment. Brands without a genuine athlete fit are generating negative earned media.',
+    tags: ['NIL', 'College Sports', 'Athletes'],
+    source: 'Reddit sentiment + NIL disclosure data'
   },
   {
     day: 'Tuesday',
     date: 'Mar 25',
     category: 'Sponsorship Intel',
-    heat: 71,
-    headline: 'Formula 1 Las Vegas GP Draws First-Time U.S. Brand Entrants',
-    summary: "The Las Vegas Grand Prix has quietly become the entry point for brands that want F1 adjacency without a multi-year global commitment. Three consumer tech brands and one challenger financial platform entered F1 activation for the first time through the Vegas race weekend. Deal structures are increasingly event-specific rather than team-season.",
-    signal: 'U.S.-market F1 viewership is up 34% since the Netflix documentary era. Brand floor for Las Vegas event activation has risen to approximately $3-5M per race weekend.',
-    tags: ['F1', 'Formula 1', 'Las Vegas', 'New Entrants'],
+    heat: 73,
+    headline: 'Creator Collaboration Clauses Are Becoming Standard in Major Sports Deals',
+    summary: "A structural shift is underway in how sports rights deals are written. Brands that once negotiated logo placement and broadcast spots are now demanding creator collaboration rights as primary deliverables. Sport is culture, and culture is carried by people — not placements. The smart money is backing creators who can translate sports moments into social content that lives far beyond the event window.",
+    signal: 'Fan attention has migrated from broadcast to creator-led content, group chats, and watch parties. Brands with creator integrations embedded in their sports deals are generating engagement multiples that traditional metrics cannot capture.',
+    tags: ['Creator Economy', 'Sports Deals', 'Sponsorship Structure'],
     source: 'Sponsorship filings + social monitoring'
   },
   {
     day: 'Wednesday',
     date: 'Mar 26',
-    category: 'Cultural Tension',
-    heat: 88,
-    headline: 'NIL Economy Fragmenting College Sports Sponsorship — Complexity Is Rising',
-    summary: "NCAA Name, Image, and Likeness spending has exceeded $1.2B in the 2025-26 academic year. Brands are now managing relationships with individual athletes, collectives, and universities simultaneously. The category is becoming structurally complex — brands without a coordinated NIL strategy are generating inconsistent returns.",
-    signal: 'Reddit and X sentiment shows fan backlash emerging against brands perceived as purely transactional in NIL deals. Authenticity and athlete fit are increasingly scrutinized.',
-    tags: ['NIL', 'College Sports', 'Athletes'],
-    source: 'Reddit sentiment + NIL disclosure data'
+    category: 'Market Signal',
+    heat: 76,
+    headline: 'Gambling Sponsorship Is Diverging Globally — Two Competing Realities Are Emerging',
+    summary: "The Premier League gambling sponsorship ban comes into effect in 2026/27, pushing major betting brands toward sleeve and stadium naming rights inventory as front-of-shirt alternatives. Meanwhile, markets like the U.S. and parts of Asia continue to see record gambling sponsorship spend. The result is not a single global trend but two competing realities that will reshape rights fees over the next 18 months.",
+    signal: 'Gambling brands exiting Premier League front-of-shirt deals represent significant displaced capital seeking new sponsorship homes. European stadium naming and sleeve inventory will see pricing pressure as demand concentrates.',
+    tags: ['Gambling', 'Premier League', 'Global Sponsorship'],
+    source: 'Regulatory filings + The Sponsor market data'
   },
   {
     day: 'Wednesday',
     date: 'Mar 26',
-    category: 'Market Signal',
-    heat: 74,
-    headline: 'NBA Playoffs Begin in Three Weeks — Finals Inventory in Final Negotiations',
-    summary: "With the NBA regular season winding down, finals presenting sponsorship inventory is in final negotiation across several open categories. The financial services category remains partially unclaimed at the national broadcast level. This is the last window before playoff ad packages lock.",
-    signal: 'Brands targeting 18-34 male audiences: NBA Finals CPM is running 22% below Super Bowl on a reach-adjusted basis. Underpriced relative to cultural impact.',
+    category: 'Opportunity Signal',
+    heat: 88,
+    headline: 'NBA Playoff Race Entering Final Two Weeks — Pistons and Thunder Emerge as Finals Favorites',
+    summary: "The NBA regular season concludes April 12. Detroit leads the East at 54-20 despite Cade Cunningham missing two weeks with a collapsed lung — a testament to the roster depth built around him. Oklahoma City leads the West at 59-16 on a 17-2 run since the All-Star break. BPI gives a Pistons-Thunder Finals matchup an 18.8% probability, the highest of any potential pairing. Finals inventory negotiations are entering their final window.",
+    signal: 'NBA Finals CPM runs roughly 22% below Super Bowl on a reach-adjusted basis for 18-34 male audiences. The Finals remain structurally underpriced relative to their cultural footprint. Open categories exist at the national broadcast level.',
     tags: ['NBA', 'Playoffs', 'Finals', 'Inventory'],
-    source: 'Ad market data + league filings'
+    source: 'ESPN BPI + ad market data'
   },
   {
     day: 'Thursday',
     date: 'Mar 27',
     category: 'Brand Intelligence',
-    heat: 81,
-    headline: 'Crypto and Sports Sponsorship: Category Rationalizing After 2022 Excess',
-    summary: "Following the FTX collapse and subsequent pullbacks, the crypto sports sponsorship category is rebuilding with more credible players. Coinbase has maintained its NBA partnership and is expanding. Kraken renewed with the NHL. New entrants are primarily stablecoin and DeFi platforms entering through niche properties rather than league-level deals.",
-    signal: 'Consumer trust in crypto brand partnerships is recovering — up 18 points from the 2023 trough according to brand perception tracking. Window for category repositioning is open.',
-    tags: ['Crypto', 'Sponsorship', 'Brand Trust'],
-    source: 'Brand perception data + X sentiment'
+    heat: 93,
+    headline: 'Indiana Pacers Launch First Sports Retail Media Network — Every Team Is Watching',
+    summary: "Pacers Sports and Entertainment debuted the Fieldhouse Media Network in partnership with Deloitte and Yieldmo — the first retail media network built directly on a sports property's first-party fan data. The network extends sponsorship from arena and local promotions to targeted web inventory using player name keywords like Caitlin Clark and Tyrese Haliburton. Within 24 hours of launch, PS&E received over 100 inbound calls from NBA teams and other leagues asking how to replicate it.",
+    signal: 'This is the convergence of sports sponsorship and retail media that the industry has discussed for three years. The brand that locks category exclusivity in a sports RMN at this early stage will have measurement infrastructure that traditional competitors cannot match.',
+    tags: ['Retail Media', 'NBA', 'Indiana Pacers', 'WNBA'],
+    source: 'AdExchanger + league filings — March 27, 2026'
   },
   {
     day: 'Thursday',
     date: 'Mar 27',
-    category: 'Opportunity Signal',
-    heat: 90,
-    headline: 'Streaming Wars Creating New Sports Broadcast Sponsorship Inventory',
-    summary: "Amazon Prime Video, Apple TV+, and Peacock have collectively added over $800M in sports rights in the last 18 months. The shift from linear to streaming is creating new sponsorship formats — interactive overlays, second-screen integrations, and pause-ad units — that traditional measurement frameworks are not capturing. First-mover advantage for brands willing to build new measurement models.",
-    signal: 'Brands that activated alongside streaming sports launches saw 28% higher unaided recall than brands in traditional broadcast slots for comparable spend levels.',
-    tags: ['Streaming', 'Amazon', 'Apple TV+', 'Digital'],
-    source: 'Media measurement research + brand studies'
+    category: 'Cultural Shift',
+    heat: 82,
+    headline: 'Enterprise Brands Are Buying Infrastructure, Not Impressions — Sponsorship Is Becoming Operational',
+    summary: "A distinct category of sports partnership has taken hold: brands like AWS, Cisco, and Microsoft are embedding their products directly into how leagues and venues operate — not just how they are branded. Cisco's NFL infrastructure spans Wi-Fi 7 deployments and AI-ready systems across stadium environments. These deals are measured through performance and enablement, not reach. Sponsorship is becoming infrastructure.",
+    signal: 'Business-backed sponsorships represent the most durable category in sports right now. They are harder to cancel, less susceptible to brand safety concerns, and create operational dependencies that deepen over time. The model is spreading beyond tech into financial services and logistics.',
+    tags: ['Enterprise', 'Technology', 'Infrastructure', 'NFL'],
+    source: 'SponsorUnited analysis + league filings'
   },
   {
     day: 'Friday',
     date: 'Mar 28',
     category: 'Weekly Headline',
-    heat: 95,
-    headline: 'The Month in Culture: March 2026 Was Defined by Sports Technology and Women\'s Athletics',
-    summary: "Two narratives dominated cultural and commercial discourse in March 2026: the accelerating mainstream adoption of AI and data tools in sports — from player performance to fan engagement — and the continued commercial validation of women's sports properties. WNBA, NWSL, and women's college basketball drove disproportionate media coverage relative to sponsorship spend levels, signaling a persistent market inefficiency that will close as brands compete for category exclusivity.",
-    signal: 'Properties where cultural velocity has outpaced commercial spend represent the highest near-term ROI opportunity. CultureOS Resonance Agent data shows WNBA and NWSL still underpriced relative to audience quality.',
-    tags: ['Monthly Summary', 'Women\'s Sports', 'AI in Sports', 'Market Opportunity'],
-    source: 'CultureOS Resonance Engine — 33,200 agents'
+    heat: 96,
+    headline: 'UConn Downs Duke on a Half-Court Buzzer Beater — The Final Four Is Set and the Moment Is Already Iconic',
+    summary: "Braylon Mullins hit a logo 3-pointer with 0.4 seconds remaining to complete the sixth-largest comeback in NCAA tournament history, sending UConn past Duke 73-72. The Huskies trailed by 19. Dan Hurley now has a chance to become the first coach since John Wooden to win three national championships in four years. Final Four: UConn vs. Illinois, Arizona vs. Michigan — April 4 in Indianapolis on TBS. The moment was already the most clipped and shared sports video of 2026 within hours of the final buzzer.",
+    signal: 'Tournament moments with this level of organic virality generate brand association value that is not captured in standard measurement frameworks. The Mullins shot will be referenced in sports culture for years. Brands with authentic March Madness adjacency are compounding that equity right now.',
+    tags: ['NCAA', 'March Madness', 'Final Four', 'UConn'],
+    source: 'NCAA.com + ESPN + social velocity data — March 30, 2026'
   }
 ];
 
